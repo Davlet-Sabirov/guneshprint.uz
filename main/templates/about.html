@@ -1,0 +1,65 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}Gunesh Print - О нас{% endblock %}
+
+{% block body%}
+
+    <div class="container pt-5">
+        <div class="banner text-white rounded-3 px-4 px-md-5 py-4">
+            <h1>О нас</h1>
+            <p>Изготовление этикеток и упаковок под заказ в Ташкенте.
+                Высокое качество печати, быстрая доставка и разумные цены.</p>
+        </div>
+    </div>
+
+    <!-- Form -->
+    <div class="py-0 py-md-5">
+        <div class="container my-5">
+            <div class="row">
+
+                <div class="col-md-6 pe-auto pe-md-5 ">
+                    <img class="pb-3" src="{% static 'img/offset.webp' %}" alt="Печать в Ташкенте">
+                    <h2 class="py-4">Типография - Gunesh Print</h2>
+                    <p>Мы предлагаем качественную полиграфию для вашего бизнеса и личных нужд.
+                        Визитки, буклеты, афиши, каталоги и многое другое — всё в высоком качестве
+                        и по доступным ценам. Яркие краски, прочные материалы и быстрые сроки изготовления!</p>
+                </div>
+
+                <form action="https://api.web3forms.com/submit" method="POST" class="col-md-6 pt-5 pt-md-0 ps-auto ps-md-5">
+
+                    <input type="hidden" name="access_key" value="45edcdc5-6f3e-48d6-8d90-9f5115a5ef92">
+
+                    <h2 class="pb-4">Рассчитаем стоимость заказа?</h2>
+
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">Имя / Название компании:</label>
+                        <input type="text" class="form-control" id="firstName" name="Имя / Название компании:" placeholder="Введите имя" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="phoneNumber" class="form-label">Номер телефона:</label>
+                        <input type="text" class="form-control" id="phoneNumber" name="Номер телефона" placeholder="+998" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="file" class="form-label">Прикрепите файлы:</label>
+                        <input type="file" class="form-control" name="Файлы" id="file">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="comments" class="form-label">Комментарий:</label>
+                        <textarea class="form-control" id="comments" rows="3" name="Комментарий" required></textarea>
+                    </div>
+
+                    <div>
+                        <button class="btn btn-primary w-100 rounded-5 py-2" onclick="sendButton(this)">Отправить заявку</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

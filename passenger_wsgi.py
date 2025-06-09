@@ -1,0 +1,1 @@
+from guneshprint.wsgi import application

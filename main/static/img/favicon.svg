@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 147 147">
+  <!-- Generator: Adobe Illustrator 29.1.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 142)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        fill: none;
+      }
+
+      .st2 {
+        fill: #f3e729;
+      }
+
+      .st3 {
+        fill: #24aee5;
+      }
+
+      .st4 {
+        fill: #e02f89;
+      }
+
+      .st1 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+        stroke-width: 7px;
+      }
+    </style>
+  </defs>
+  <g id="_Слой_2-2">
+    <g>
+      <path d="M137.9,73.5c0,29.3-19.5,54-46.2,61.8-5.8,1.7-27.6,2.1-32,1.1l76.6-77c1,4.5,1.6,9.3,1.6,14.1Z"/>
+      <path class="st2" d="M136.3,59.3l-76.6,77c-12.4-2.7-23.4-8.9-32-17.6L118.5,27.5c8.7,8.5,15,19.5,17.8,31.9h0Z"/>
+      <path class="st4" d="M118.5,27.5L27.7,118.8c-8-8.1-13.9-18.4-16.7-29.9L88.5,10.9c11.5,2.8,21.8,8.6,30,16.6Z"/>
+      <path class="st3" d="M88.5,10.9L11,88.9c-1.2-4.9-1.9-10.1-1.9-15.4,0-32.1,23.1-60,54-63.6s20.6-.2,25.5,1h0Z"/>
+    </g>
+  </g>
+  <rect class="st0" width="147" height="147"/>
+  <circle class="st1" cx="73.5" cy="73.2" r="64.4"/>
+</svg>
