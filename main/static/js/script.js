@@ -1,53 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // 🔹 Навигация по сайту Burger
-    let sections = document.querySelectorAll('section');
-    let navLinks = document.querySelectorAll('header nav a');
-
-    window.addEventListener("scroll", () => {
-        let top = window.scrollY;
-
-        sections.forEach(sec => {
-            let offset = sec.offsetTop;
-            let height = sec.offsetHeight;
-            let id = sec.getAttribute('id');
-
-            if (top >= offset && top < offset + height) {
-                navLinks.forEach(link => link.classList.remove('active'));
-
-                let activeLink = document.querySelector(`header nav a[href*="${id}"]`);
-                if (activeLink) { activeLink.classList.add('active') };
-            };
-        });
-    });
-
-    // 🔹 Закрытие бургера при клике на ссылку
-    document.querySelectorAll("#offcanvasNavbar a").forEach(link => {
-        link.addEventListener("click", () => {
-            let offcanvasElement = document.getElementById("offcanvasNavbar");
-            let offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
-            if (offcanvas) {offcanvas.hide()};
-        });
-    });
-
-    // 🔹 Модальные окна с изображениями
-    const modalElement = document.getElementById('imageModal');
-    const modal = new bootstrap.Modal(document.getElementById('imageModal'));
-    const modalImg = document.getElementById("modalImg");
-
-    document.querySelectorAll(".img-item").forEach(img => {
-        img.addEventListener("click", function () {
-            modalImg.src = this.src;
-            modal.show();
-        });
-    });
-
-    // Закрытие модального окна по клику на него
-    modalImg.addEventListener("click", function () {
-        modal.hide();
-    });
-
-    // 🔹 JavaScript для показа скрытых изображений
+    // 🔹 JavaScript for the hidden images
     document.getElementById("showMoreBtn").addEventListener("click", function () {
         let hiddenGallery = document.querySelector(".hidden-gallery");
         if (hiddenGallery.classList.contains("d-none")) {
@@ -59,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 🔹 Инициализация Swiper для видео
+    // 🔹 Swiper video
     const swiper = new Swiper('.swiper', {
         spaceBetween: 10,
         direction: 'horizontal',
@@ -90,16 +43,16 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-
+    // 🔹 Play button video
     document.querySelectorAll('.video-wrapper').forEach(wrapper => {
         const video = wrapper.querySelector('.video-item');
         const playButton = wrapper.querySelector('.play-button');
 
-        // Клик на кнопку Play
+        // Click to the Play button
         playButton.addEventListener('click', function (event) {
             event.stopPropagation(); // Останавливаем всплытие клика, чтобы не сработало на родителе
 
-            // Останавливаем все остальные видео
+            // Stopping the rest
             document.querySelectorAll('.video-item').forEach(v => {
                 if (v !== video) {
                     v.pause();
@@ -109,26 +62,45 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
 
-            // Запускаем текущее видео и скрываем кнопку
+            // Launch the current video and hide the Play button
             video.play();
             playButton.style.display = 'none';
         });
 
-        // Клик на видео — пауза
+        // Pause button video
         video.addEventListener('click', function () {
             if (!video.paused) {
                 video.pause();
-                playButton.style.display = 'flex'; // Показываем кнопку Play при паузе
+                playButton.style.display = 'flex'; // Showing Play button when it stopped
             }
         });
 
-        // При окончании видео показываем кнопку Play
+        // When it ends, show the Play button again
         video.addEventListener('ended', () => {
             playButton.style.display = 'flex';
         });
     });
 
-    // Form button Send
+    // 🔹 Accordion
+    const items = document.querySelectorAll('.accordion .QA');
+
+    items.forEach(item => {
+        const checkbox = item.querySelector('input[type="checkbox"]');
+
+        checkbox.addEventListener('change', () => {
+            if (checkbox.checked) {
+                // Закрываем все остальные
+                items.forEach(otherItem => {
+                    const otherCheckbox = otherItem.querySelector('input[type="checkbox"]');
+                    if (otherCheckbox !== checkbox) {
+                        otherCheckbox.checked = false;
+                    }
+                });
+            }
+        });
+    });
+
+    // 🔹 Form button
     var counter = 0;
 
     function sendButton(el) {

@@ -1,0 +1,800 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 16px;
+}
+
+body h1 {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+body h2 {
+    font-size: clamp(1rem, 2.2vw, 2.1rem);
+    margin-bottom: 3rem;
+}
+
+body h2 {
+    font-size: clamp(1.5rem, 2.2vw, 2.1rem);
+}
+
+body a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+body p {
+    margin: 0;
+    padding: 0;
+}
+
+body ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body video {
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+
+/*--------------------- Topper ---------------------*/
+
+.topper {
+    white-space: nowrap;
+}
+
+/*--------------------- Header ---------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+header .header-icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+header a {
+    font-weight: 400;
+}
+
+header a:hover i {
+    color: orange;
+}
+
+header i {
+    font-size: 25px;
+}
+
+/* ========================================================== */
+
+header .logo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+header .logo-disc {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    header .logo-disc {
+        display: inline-block;
+        padding-left: 0.6rem;
+        border-left: 1px solid gray;
+        font-size: 14px;
+    }
+}
+
+/* ========================================================== */
+
+header .location {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    gap: 0.6rem;
+}
+
+header .loc-disc {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    header .loc-disc {
+        display: inline-block;
+    }
+}
+
+header .location:hover a {
+    color: orange;
+}
+
+/* ========================================================== */
+
+header .phone {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    gap: 0.6rem;
+}
+
+header .phone-disc {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    header .phone-disc {
+        display: inline-block;
+    }
+}
+
+header .phone:hover .fa-solid {
+    color: orange;
+}
+
+header .phone .num-1:hover {
+    color: orange;
+}
+
+header .phone .num-2:hover {
+    color: orange;
+}
+
+/* ========================================================== */
+
+header .insta {
+    display: none;
+}
+
+@media (min-width: 576px) {
+    header .insta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+        gap: 0.6rem;
+    }
+}
+
+header .inst-disc {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    header .inst-disc {
+        display: inline-block;
+    }
+}
+
+header .insta:hover a {
+    color: orange;
+}
+
+/* ========================================================== */
+
+header .btn-header {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    header .btn-header {
+        display: inline-block;
+        padding: 16px 18px;
+        transition: all 0.3s ease;
+        border: 1px solid black;
+        border-radius: 32px;
+        color: black;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+header .btn-header:hover {
+    color: white;
+    border: 1px solid orange;
+    background: orange;
+}
+
+.topper .line {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    .topper .line {
+        display: block;
+        height: 1px;
+        background-color: rgba(0,0,0,0.1);
+    }
+}
+
+/*--------------------- Navbar ---------------------*/
+
+nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: none;
+}
+
+@media (min-width: 992px) {
+    nav ul li {
+        display: flex;
+        flex: 1;
+    }
+}
+
+nav ul li a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+nav ul li a:hover {
+    background-color: rgba(0,0,0,0.03);
+}
+
+nav ul li:not(:last-child) a {
+    border-right: 1px solid rgba(0,0,0,0.1);
+}
+
+/*========================= Main =========================*/
+
+main {
+    background-image: linear-gradient(135deg, rgba(37, 144, 203, 1) 0%, rgba(222, 66, 175, 1) 50%, rgba(240, 192, 65, 1) 100%);
+    color: white;
+}
+
+main .main-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .main-disc {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 45%;
+    gap: 2rem;
+    padding-right: 2rem;
+}
+
+
+main .main-img {
+    flex: 0 0 55%;
+    margin: 3rem 0;
+}
+
+@media (max-width: 992px) {
+    main .main-items {
+        flex-direction: column;
+    }
+
+    main .main-disc {
+        margin-top: 3rem;
+    }
+
+    main .main-disc,
+    main .main-img {
+        flex: 0 0 100%;
+        width: 100%;
+    }
+}
+
+main p {
+    margin-right: 3rem;
+}
+
+main h1 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+main .btn-main {
+    margin-right: auto;
+    padding: 20px 30px;
+    border: 1px solid white;
+    border-radius: 100px;
+    font-size: 18px;
+    color: white;
+}
+
+main .btn-main:hover {
+    background: orange;
+    color: black;
+    border: 1px solid orange;
+}
+
+main .btn-main::after {
+    content: '\f061';
+    font-family: FontAwesome;
+    font-size: 14px;
+    margin-left: 14px;
+    transition: all 0.3s ease;
+}
+
+main .btn-main:hover::after {
+    margin-left: 18px;
+    font-size: 16px;
+}
+
+/*========================= Best Icons =========================*/
+
+.best-icons {
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.best-icons .b-items {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+}
+
+.best-icons .b-items div {
+    flex: 1;
+    background-color: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+@media (max-width: 768px) {
+    .best-icons .b-items {
+        flex-direction: column;
+    }
+}
+
+.best-icons .b-items h3 {
+    margin: 1rem;
+    user-select: none;
+}
+
+.best-icons .b-items div:hover h3 {
+    color: orange;
+}
+
+/*--------------------- Gallery ---------------------*/
+
+.gallery {
+    background-color: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 3rem 0;
+}
+
+.gallery .g-block {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.gallery .img-block {
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.gallery .img-block img {
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+@media (min-width: 992px) {
+    .gallery .img-block img:hover {
+        scale: 1.03;
+    }
+}
+
+.gallery .hidden-gallery {
+    margin-top: 1rem;
+}
+
+
+/*--------------------- Clients ---------------------*/
+
+.clients {
+    overflow-x: hidden;
+    padding: 3rem 0;
+}
+
+.clients h2 {
+    text-align: center;
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(250px * 12);
+}
+
+.slider-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+    100% {
+        transform: translateX(calc(-250px * 6));
+    }
+}
+
+
+/*--------------------- Accordion ---------------------*/
+
+
+.accordion-block {
+    padding: 3rem 0;
+    background-color: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.accordion-block h2 {
+    text-align: center;
+}
+
+.accordion {
+    margin: 60px auto;
+}
+
+.accordion .QA {
+    background: white;
+    list-style: none;
+    width: 80%;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 30px;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 1);
+}
+
+.accordion li label {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+}
+
+.accordion li label:hover {
+    color: orange;
+}
+
+.accordion label::before {
+    content: '+';
+    margin-right: 10px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.accordion input[type="checkbox"] {
+    display: none;
+}
+
+.accordion .content {
+    color: #555;
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+.accordion input[type="checkbox"]:checked + label + .content {
+    max-height: 400px;
+    padding: 10px 10px 20px;
+}
+
+
+.accordion input[type="checkbox"]:checked + label::before {
+    content: '‒';
+}
+
+
+/*--------------------- Video ---------------------*/
+
+
+.video {
+    padding: 3rem 0;
+}
+
+.video .v-title {
+    margin-bottom: 3rem;
+}
+
+.video h2 {
+    margin-bottom: 1rem;
+}
+
+.video .v-disc {
+    display: flex;
+    justify-content: space-between;
+}
+
+.video .btn-vid {
+    margin-right: auto;
+}
+
+.video .btn-vid a {
+    padding: 12px 34px;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 24px;
+}
+
+.video .btn-vid a::after {
+    content: '\f061';
+    font-family: FontAwesome;
+    font-size: 14px;
+    margin-left: 14px;
+}
+
+.video .btn-vid a:hover {
+    color: white;
+    background-color: #ff3131;
+}
+
+.video .btn-vid a:hover::after {
+    content: '\f061';
+    font-family: FontAwesome;
+    font-size: 14px;
+    margin-left: 16px;
+    transition: .2s;
+}
+
+.video .arrows {
+    display: flex;
+    gap: 7rem;
+}
+
+.video .swiper-pagination {
+    bottom: 15px !important;
+}
+
+.video .swiper-button-next,
+.video .swiper-button-prev {
+    position: static !important;
+    top: auto !important;
+    width: auto !important;
+    height: auto !important;
+    margin-top: auto !important;
+}
+
+.video .swiper-button-prev {
+    background-image: url(/static/img/arrow.svg);
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 21px;
+    width: 50px !important;
+    height: 50px !important;
+}
+
+.video .swiper-button-next {
+    background-image: url(/static/img/arrow.svg);
+    border-radius: 100px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 21px;
+    width: 50px !important;
+    height: 50px !important;
+    transform: rotate(180deg);
+}
+
+.video .swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background-color: whitesmoke;
+}
+
+.video .swiper-button-prev::after,
+.video .swiper-button-next::after {
+    display: none !important;
+}
+
+
+.video .play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 100%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.video .play-button::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 20px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+/* Скрытие кнопки при воспроизведении */
+.video .playing + .play-button {
+    display: none;
+}
+
+/*--------------------- Form ---------------------*/
+
+.form {
+    padding: 3rem 0;
+    background-color: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.form img {
+    max-width: 100%;
+    height: auto;
+}
+
+.form .btn-red:hover {
+    cursor: pointer;
+}
+
+/*--------------------- Footer ---------------------*/
+
+
+footer {
+    background: #233040; 
+}
+
+footer, footer a {
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+footer .bi-instagram:hover {
+    color: rgb(255, 125, 233);
+}
+
+footer .bi-telegram:hover {
+    color: rgb(64, 201, 255);
+}
+
+footer .bi-facebook:hover {
+    color: rgb(54, 69, 211);
+}
+
+footer .bi-telephone-fill:hover {
+    color: rgb(100, 211, 66);
+}
+
+
+/*------------------ Прочие страницы ------------------*/
+
+
+.banner {
+    background-image: linear-gradient(135deg, rgba(37, 144, 203, 1) 0%, rgba(222, 66, 175, 1) 50%, rgba(240, 192, 65, 1) 100%);
+    background-size: 140%;
+    transition: 0.5s;
+}
+
+.banner:hover {
+    background-image: linear-gradient(135deg, rgba(37, 144, 203, 1) 0%, rgba(222, 66, 175, 1) 50%, rgba(240, 192, 65, 1) 100%);
+    background-size: 100%;
+}
+
+
+/*------------------ Политика конфиденциальности ------------------*/
+
+
+.breadcrumbs ul li {
+    margin-right: 8px;
+}
+
+.breadcrumbs ul li a {
+    display: flex;
+    align-items: center;
+    color: #777;
+}
+
+.breadcrumbs ul li a:hover {
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.breadcrumbs ul li a::after {
+    content: '\f105';
+    font-family: FontAwesome;
+    font-size: 10px;
+    margin-left: 8px;
+}
+
+.politics h5 {
+    margin: 40px 0;
+}
+
+.politics .wp-block-table th, .politics .wp-block-table td {
+    border: 1px solid;
+    padding: .5em;
+}
