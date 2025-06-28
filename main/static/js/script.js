@@ -1,16 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    // 🔹 JavaScript for the hidden images
-    document.getElementById("showMoreBtn").addEventListener("click", function () {
-        let hiddenGallery = document.querySelector(".hidden-gallery");
-        if (hiddenGallery.classList.contains("d-none")) {
-            hiddenGallery.classList.remove("d-none");
-            this.innerHTML = 'Скрыть <i class="bi bi-chevron-up"></i>';
-        } else {
-            hiddenGallery.classList.add("d-none");
+    // 🔹 Button Show More
+    document.getElementById("btn-show-more").addEventListener("click", function () {
+        const hidden = document.querySelector(".hidden-gallery");
+        const visible = window.getComputedStyle(hidden).display !== "none";
+
+        if (visible) {
+            hidden.style.display = "none";
             this.innerHTML = 'Показать больше <i class="bi bi-chevron-down"></i>';
+        } else {
+            hidden.style.display = "block";
+            this.innerHTML = 'Скрыть <i class="bi bi-chevron-up"></i>';
         }
     });
+
+    // 🔹 Modal Window
+    function openModal(img) {
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modalImg');
+
+        modal.style.display = "block";
+        modalImg.src = img.src;
+    }
+    function closeModal() {
+        document.getElementById('modal').style.display = "none";
+    }
 
     // 🔹 Swiper video
     const swiper = new Swiper('.swiper', {

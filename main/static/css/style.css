@@ -409,7 +409,7 @@ main .btn-main:hover::after {
     padding: 30px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .best-icons .b-items {
         flex-direction: column;
     }
@@ -424,6 +424,10 @@ main .btn-main:hover::after {
     color: orange;
 }
 
+.best-icons .b-items p {
+    color: rgba(0,0,30,0.75);
+}
+
 /*--------------------- Gallery ---------------------*/
 
 .gallery {
@@ -434,8 +438,14 @@ main .btn-main:hover::after {
 
 .gallery .g-block {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .gallery .g-block {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .gallery .img-block {
@@ -455,8 +465,62 @@ main .btn-main:hover::after {
 }
 
 .gallery .hidden-gallery {
+    display: none;
     margin-top: 1rem;
 }
+
+@media (min-width: 768px) {
+    .gallery .hidden-gallery {
+        display: none;
+    }
+}
+
+.gallery button {
+    display: block;
+    margin: 2rem auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .gallery button {
+        display: none;
+    }
+}
+
+.modal {
+  display: none; /* по умолчанию скрыто */
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  cursor: zoom-out;
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 80vh;
+  border-radius: 8px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 36px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 
 
 /*--------------------- Clients ---------------------*/

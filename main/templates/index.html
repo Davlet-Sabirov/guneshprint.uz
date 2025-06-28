@@ -117,21 +117,14 @@
         </div>
 
         <!-- Show more button -->
-        <div class="text-center mt-4 d-md-none">
-            <button id="showMoreBtn" class="btn">
-                Показать больше <i class="bi bi-chevron-down"></i>
-            </button>
-        </div>
+        <button id="btn-show-more" class="btn-show-more">
+            Показать больше <i class="bi bi-chevron-down"></i>
+        </button>
 
         <!-- Modal window -->
-        <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-md">
-                <div class="modal-content">
-                    <div class="modal-body text-center">
-                        <img id="modalImg" class="img-fluid rounded" src="" alt="Просмотр изображения">
-                    </div>
-                </div>
-            </div>
+        <div id="modal" class="modal" onclick="closeModal()">
+          <span class="modal-close">&times;</span>
+          <img class="modal-content" id="modalImg">
         </div>
 
     </div>
