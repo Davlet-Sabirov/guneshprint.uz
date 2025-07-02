@@ -49,44 +49,44 @@
         <div class="g-block">
             <div>
                 <div class="img-block">
-                    <img class="img-item" src="{% static 'img/gallery/up_1.jpg' %}" alt="...">
+                    <img src="{% static 'img/gallery/up-1.webp' %}" alt="...">
                 </div>
             </div>
             <div>
                 <div class="img-block">
-                    <img class="img-item" src="{% static 'img/gallery/up_2.jpg' %}" alt="...">
+                    <img src="{% static 'img/gallery/up-2.webp' %}" alt="...">
                 </div>
             </div>
             <div>
                 <div class="img-block">
-                    <img class="img-item" src="{% static 'img/gallery/up_3.jpg' %}" alt="...">
+                    <img src="{% static 'img/gallery/up-3.webp' %}" alt="...">
                 </div>
             </div>
             <div>
                 <div class="img-block">
-                    <img class="img-item" src="{% static 'img/gallery/up_4.jpg' %}" alt="...">
+                    <img src="{% static 'img/gallery/up-4.webp' %}" alt="...">
                 </div>
             </div>
 
             <!-------------------------------------------------------------------->
             <div>
                 <div class="img-block">
-                    <img class="img-item" src="{% static 'img/gallery/up_5.jpg' %}" alt="...">
+                    <img src="{% static 'img/gallery/up-5.webp' %}" alt="...">
                 </div>
             </div>
             <div>
                 <div class="img-block">
-                    <img class="img-item" src="{% static 'img/gallery/up_6.jpg' %}" alt="...">
+                    <img src="{% static 'img/gallery/up-6.webp' %}" alt="...">
                 </div>
             </div>
             <div>
                 <div class="img-block">
-                    <img class="img-item" src="{% static 'img/gallery/up_7.jpg' %}" alt="...">
+                    <img src="{% static 'img/gallery/up-7.webp' %}" alt="...">
                 </div>
             </div>
             <div>
                 <div class="img-block">
-                    <img class="img-item" src="{% static 'img/gallery/up_8.jpg' %}" alt="...">
+                    <img src="{% static 'img/gallery/up-8.webp' %}" alt="...">
                 </div>
             </div>
         </div>
@@ -95,36 +95,36 @@
             <div class="g-block">
                 <div>
                     <div class="img-block">
-                        <img class="img-item" src="{% static 'img/gallery/up_9.jpg' %}" alt="...">
+                        <img src="{% static 'img/gallery/up-9.webp' %}" alt="...">
                     </div>
                 </div>
                 <div>
                     <div class="img-block">
-                        <img class="img-item" src="{% static 'img/gallery/up_10.jpg' %}" alt="...">
+                        <img src="{% static 'img/gallery/up-10.webp' %}" alt="...">
                     </div>
                 </div>
                 <div>
                     <div class="img-block">
-                        <img class="img-item" src="{% static 'img/gallery/up_11.jpg' %}" alt="...">
+                        <img src="{% static 'img/gallery/up-11.webp' %}" alt="...">
                     </div>
                 </div>
                 <div>
                     <div class="img-block">
-                        <img class="img-item" src="{% static 'img/gallery/up_12.jpg' %}" alt="...">
+                        <img src="{% static 'img/gallery/up-12.webp' %}" alt="...">
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Show more button -->
-        <button id="btn-show-more" class="btn-show-more">
+        <button class="btn-show-more">
             Показать больше <i class="bi bi-chevron-down"></i>
         </button>
 
         <!-- Modal window -->
-        <div id="modal" class="modal" onclick="closeModal()">
-          <span class="modal-close">&times;</span>
-          <img class="modal-content" id="modalImg">
+        <div class="modal">
+            <span class="modal-close">&times;</span>
+            <img class="modal-content" src="" alt="">
         </div>
 
     </div>
@@ -153,6 +153,92 @@
         </div>
     </div>
 </div>
+
+<!-- Video -->
+<section id="video" class="video">
+    <div class="container">
+        <div class="v-disc">
+            <div class="v-title">
+                <h2>Вы ещё думаете?</h2>
+                <p>Тогда посмотрите наши видео!</p>
+            </div>
+            <div class="btn-vid">
+                <a href="https://www.instagram.com/gunesh_print/" title="Перейти в Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                    Instagram</a>
+            </div>
+        </div>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <div class="video-wrapper">
+                        <video src="{% static 'vid/v-01.mp4' %}" class="video-item" width="300"
+                            poster="{% static 'vid/vid-cov/v-01.jpg' %}"></video>
+                        <div class="play-button"></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="video-wrapper">
+                        <video src="{% static 'vid/v-02.mp4' %}" class="video-item" width="300"
+                            poster="{% static 'vid/vid-cov/v-02.jpg' %}"></video>
+                        <div class="play-button"></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="video-wrapper">
+                        <video src="{% static 'vid/v-03.mp4' %}" class="video-item" width="300"
+                            poster="{% static 'vid/vid-cov/v-03.jpg' %}"></video>
+                        <div class="play-button"></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="video-wrapper">
+                        <video src="{% static 'vid/v-04.mp4' %}" class="video-item" width="300"
+                            poster="{% static 'vid/vid-cov/v-04.jpg' %}"></video>
+                        <div class="play-button"></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="video-wrapper">
+                        <video src="{% static 'vid/v-05.mp4' %}" class="video-item" width="300"
+                            poster="{% static 'vid/vid-cov/v-05.jpg' %}"></video>
+                        <div class="play-button"></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="video-wrapper">
+                        <video src="{% static 'vid/v-06.mp4' %}" class="video-item" width="300"
+                            poster="{% static 'vid/vid-cov/v-06.jpg' %}"></video>
+                        <div class="play-button"></div>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="video-wrapper">
+                        <video src="{% static 'vid/v-07.mp4' %}" class="video-item" width="300"
+                            poster="{% static 'vid/vid-cov/v-07.jpg' %}"></video>
+                        <div class="play-button"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="arrows">
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 <!-- Accordion -->
 <div class="accordion-block">
@@ -223,140 +309,6 @@
             </div>
         </li>
     </ul>
-</div>
-
-<!-- Video -->
-<section id="video" class="video">
-    <div class="container">
-        <div class="v-disc">
-            <div class="v-title">
-                <h2>Вы ещё думаете?</h2>
-                <p>Тогда рекомендуем Вам посмотреть наши видео!</p>
-            </div>
-            <div class="btn-vid">
-                <a href="https://t.me/shamsuz1983" title="Перейти в Telegram">Задать вопрос</a>
-            </div>
-        </div>
-
-        <div class="swiper">
-            <div class="swiper-wrapper">
-
-                <div class="swiper-slide d-flex justify-content-center">
-                    <div class="video-wrapper">
-                        <video src="{% static 'vid/v-01.mp4' %}" class="video-item rounded-4" width="300"
-                            poster="{% static 'vid/vid-cov/v-01.jpg' %}"></video>
-                        <div class="play-button"></div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide d-flex justify-content-center">
-                    <div class="video-wrapper">
-                        <video src="{% static 'vid/v-02.mp4' %}" class="video-item rounded-4" width="300"
-                            poster="{% static 'vid/vid-cov/v-02.jpg' %}"></video>
-                        <div class="play-button"></div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide d-flex justify-content-center">
-                    <div class="video-wrapper">
-                        <video src="{% static 'vid/v-03.mp4' %}" class="video-item rounded-4" width="300"
-                            poster="{% static 'vid/vid-cov/v-03.jpg' %}"></video>
-                        <div class="play-button"></div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide d-flex justify-content-center">
-                    <div class="video-wrapper">
-                        <video src="{% static 'vid/v-04.mp4' %}" class="video-item rounded-4" width="300"
-                            poster="{% static 'vid/vid-cov/v-04.jpg' %}"></video>
-                        <div class="play-button"></div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide d-flex justify-content-center">
-                    <div class="video-wrapper">
-                        <video src="{% static 'vid/v-05.mp4' %}" class="video-item rounded-4" width="300"
-                            poster="{% static 'vid/vid-cov/v-05.jpg' %}"></video>
-                        <div class="play-button"></div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide d-flex justify-content-center">
-                    <div class="video-wrapper">
-                        <video src="{% static 'vid/v-06.mp4' %}" class="video-item rounded-4" width="300"
-                            poster="{% static 'vid/vid-cov/v-06.jpg' %}"></video>
-                        <div class="play-button"></div>
-                    </div>
-                </div>
-
-                <div class="swiper-slide d-flex justify-content-center">
-                    <div class="video-wrapper">
-                        <video src="{% static 'vid/v-07.mp4' %}" class="video-item rounded-4" width="300"
-                            poster="{% static 'vid/vid-cov/v-07.jpg' %}"></video>
-                        <div class="play-button"></div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="arrows d-flex justify-content-center pt-5">
-                <div class="swiper-pagination"></div>
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- Form -->
-<div class="form">
-    <div class="container">
-        <div class="row">
-
-            <form action="https://api.web3forms.com/submit" method="POST" class="col-md-5 pe-auto pe-md-5">
-
-                <input type="hidden" name="access_key" value="45edcdc5-6f3e-48d6-8d90-9f5115a5ef92">
-
-                <h2 class="pb-4">Рассчитаем заказ?</h2>
-
-                <div class="mb-3">
-                    <label for="firstName" class="form-label">Имя / Название компании:</label>
-                    <input type="text" class="form-control" id="firstName" name="Имя / Название компании:" placeholder="Введите имя" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="phoneNumber" class="form-label">Номер телефона:</label>
-                    <input type="text" class="form-control" id="phoneNumber" name="Номер телефона" placeholder="+998" required>
-                </div>
-
-                <div class="mb-3">
-                    <label for="file" class="form-label">Прикрепите файлы:</label>
-                    <input type="file" class="form-control" name="Файлы" id="file">
-                </div>
-
-                <div class="mb-4">
-                    <label for="comments" class="form-label">Комментарий:</label>
-                    <textarea class="form-control" id="comments" rows="3" name="Комментарий" required></textarea>
-                </div>
-
-                <div>
-                    <button class="btn btn-primary w-100 rounded-5 py-2" onclick="sendButton(this)">Отправить заявку</button>
-                </div>
-
-            </form>
-
-            <div class="col-md-7 pt-5 pt-md-0 ps-auto ps-md-5">
-                <img class="pb-3" src="{% static 'img/offset.webp' %}" alt="Печать в Ташкенте">
-                <h2 class="py-4">Типография - Gunesh Print</h2>
-                <p>Мы предлагаем качественную полиграфию для вашего бизнеса и личных нужд.
-                    Визитки, буклеты, афиши, каталоги и многое другое — всё в высоком качестве
-                    и по доступным ценам. Яркие краски, прочные материалы и быстрые сроки изготовления!
-                </p>
-            </div>
-        </div>
-    </div>
 </div>
 
 {% endblock %}

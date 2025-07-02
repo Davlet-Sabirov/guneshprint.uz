@@ -6,132 +6,99 @@
 {% block body%}
 
 
-    <div class="container pt-5">
-        <div class="banner text-white rounded-3 px-4 px-md-5 py-4">
+    <div class="banner">
+        <div class="container">
             <h1>Флексопечать</h1>
             <p>Изготовление этикеток и упаковок на рулоне, путём флексопечати. Высокое качество, быстрая доставка и разумные цены.</p>
         </div>
     </div>
 
-    <!-- Галерея -->
-    <div class="gallery bg-light py-3">
-        <div class="container my-5">
+    <!-- Gallery -->
+    <div class="gallery">
+        <div class="container">
+            <h2>Галерея</h2>
 
-            <div class="row">
-                <div class="col-6 col-md-3 pb-3 pb-md-0">
-                    <img class="img-thumbnail" src="{% static 'img/Flexo/f-01.jpg' %}" alt="...">
-                </div>
-                <div class="col-6 col-md-3 pb-3 pb-md-0">
-                    <img class="img-thumbnail" src="{% static 'img/Flexo/f-02.jpg' %}" alt="...">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img class="img-thumbnail" src="{% static 'img/Flexo/f-03.jpg' %}" alt="...">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img class="img-thumbnail" src="{% static 'img/Flexo/f-04.jpg' %}" alt="...">
-                </div>
-            </div>
-
-            <div class="row pt-4">
-                <div class="col-6 col-md-3 pb-3 pb-md-0">
-                    <img class="img-thumbnail" src="{% static 'img/Flexo/f-05.jpg' %}" alt="...">
-                </div>
-                <div class="col-6 col-md-3 pb-3 pb-md-0">
-                    <img class="img-thumbnail" src="{% static 'img/Flexo/f-06.jpg' %}" alt="...">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img class="img-thumbnail" src="{% static 'img/Flexo/f-07.jpg' %}" alt="...">
-                </div>
-                <div class="col-6 col-md-3">
-                    <img class="img-thumbnail" src="{% static 'img/Flexo/f-08.jpg' %}" alt="...">
-                </div>
-            </div>
-
-            <div class="hidden-gallery d-none d-md-block">
-
-                <div class="row pt-4">
-                    <div class="col-6 col-md-3 pb-3 pb-md-0">
-                        <img class="img-thumbnail" src="{% static 'img/Flexo/f-09.jpg' %}" alt="...">
+            <div class="g-block">
+                <div>
+                    <div class="img-block">
+                        <img src="{% static 'img/flexo/f-01.webp' %}" alt="...">
                     </div>
-                    <div class="col-6 col-md-3 pb-3 pb-md-0">
-                        <img class="img-thumbnail" src="{% static 'img/Flexo/f-10.jpg'' %}" alt="...">
+                </div>
+                <div>
+                    <div class="img-block">
+                        <img src="{% static 'img/flexo/f-02.webp' %}" alt="...">
                     </div>
-                    <div class="col-6 col-md-3">
-                        <img class="img-thumbnail" src="{% static 'img/Flexo/f-11.jpg'' %}" alt="...">
+                </div>
+                <div>
+                    <div class="img-block">
+                        <img src="{% static 'img/flexo/f-03.webp' %}" alt="...">
                     </div>
-                    <div class="col-6 col-md-3">
-                        <img class="img-thumbnail" src="{% static 'img/Flexo/f-12.jpg'' %}" alt="...">
+                </div>
+                <div>
+                    <div class="img-block">
+                        <img src="{% static 'img/flexo/f-04.webp' %}" alt="...">
+                    </div>
+                </div>
+
+                <!-------------------------------------------------------------------->
+                <div>
+                    <div class="img-block">
+                        <img src="{% static 'img/flexo/f-05.webp' %}" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="img-block">
+                        <img src="{% static 'img/flexo/f-06.webp' %}" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="img-block">
+                        <img src="{% static 'img/flexo/f-07.webp' %}" alt="...">
+                    </div>
+                </div>
+                <div>
+                    <div class="img-block">
+                        <img src="{% static 'img/flexo/f-08.webp' %}" alt="...">
                     </div>
                 </div>
             </div>
 
-            <!-- Кнопка "Показать больше" -->
-            <div class="text-center mt-4 d-md-none">
-                <button id="showMoreBtn" class="btn">
-                    Показать больше <i class="bi bi-chevron-down"></i>
-                </button>
-            </div>
-
-            <!-- Модальное окно -->
-            <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-md">
-                    <div class="modal-content">
-                        <div class="modal-body text-center">
-                            <img id="modalImg" class="img-fluid rounded" src="" alt="Просмотр изображения">
+            <div class="hidden-gallery">
+                <div class="g-block">
+                    <div>
+                        <div class="img-block">
+                            <img src="{% static 'img/flexo/f-09.webp' %}" alt="...">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img-block">
+                            <img src="{% static 'img/flexo/f-10.webp' %}" alt="...">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img-block">
+                            <img src="{% static 'img/flexo/f-11.webp' %}" alt="...">
+                        </div>
+                    </div>
+                    <div>
+                        <div class="img-block">
+                            <img src="{% static 'img/flexo/f-12.webp' %}" alt="...">
                         </div>
                     </div>
                 </div>
             </div>
 
-        </div>
-    </div>
+            <!-- Show more button -->
+            <button class="btn-show-more">
+                Показать больше <i class="bi bi-chevron-down"></i>
+            </button>
 
-    <!-- Form -->
-    <div class="py-0 py-md-5">
-        <div class="container my-5">
-            <div class="row">
-
-                <form action="https://api.web3forms.com/submit" method="POST" class="col-md-6 pe-auto pe-md-5">
-
-                    <input type="hidden" name="access_key" value="45edcdc5-6f3e-48d6-8d90-9f5115a5ef92">
-
-                    <h2 class="pb-4">Рассчитаем стоимость заказа?</h2>
-
-                    <div class="mb-3">
-                        <label for="firstName" class="form-label">Имя / Название компании:</label>
-                        <input type="text" class="form-control" id="firstName" name="Имя / Название компании:" placeholder="Введите имя" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="phoneNumber" class="form-label">Номер телефона:</label>
-                        <input type="text" class="form-control" id="phoneNumber" name="Номер телефона" placeholder="+998" required>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="file" class="form-label">Прикрепите файлы:</label>
-                        <input type="file" class="form-control" name="Файлы" id="file">
-                    </div>
-
-                    <div class="mb-4">
-                        <label for="comments" class="form-label">Комментарий:</label>
-                        <textarea class="form-control" id="comments" rows="3" name="Комментарий" required></textarea>
-                    </div>
-
-                    <div>
-                        <button class="btn btn-primary w-100 rounded-5 py-2" onclick="sendButton(this)">Отправить заявку</button>
-                    </div>
-
-                </form>
-
-                <div class="col-md-6 pt-5 pt-md-0 ps-auto ps-md-5">
-                    <img class="pb-3" src="{% static 'img/offset.webp' %}" alt="Печать в Ташкенте">
-                    <h2 class="py-4">Типография - Gunesh Print</h2>
-                    <p>Мы предлагаем качественную полиграфию для вашего бизнеса и личных нужд.
-                        Визитки, буклеты, афиши, каталоги и многое другое — всё в высоком качестве
-                        и по доступным ценам. Яркие краски, прочные материалы и быстрые сроки изготовления!</p>
-                </div>
-
+            <!-- Modal window -->
+            <div class="modal">
+                <span class="modal-close">&times;</span>
+                <img class="modal-content" src="" alt="">
             </div>
+
         </div>
     </div>
 

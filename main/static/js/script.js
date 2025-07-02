@@ -1,7 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // 🔹 Navbar Mobile
+    const checkbox = document.getElementById('check');
+    const navMob = document.querySelector('.nav-mob');
+
+    checkbox.addEventListener('change', () => {
+        navMob.classList.toggle('active', checkbox.checked);
+    });
+
+    document.querySelectorAll('.nav-mob a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMob.classList.remove('active');
+            checkbox.checked = false;
+        });
+    });
+
     // 🔹 Button Show More
-    document.getElementById("btn-show-more").addEventListener("click", function () {
+    document.querySelector(".btn-show-more").addEventListener("click", function () {
         const hidden = document.querySelector(".hidden-gallery");
         const visible = window.getComputedStyle(hidden).display !== "none";
 
@@ -15,16 +30,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // 🔹 Modal Window
-    function openModal(img) {
-        const modal = document.getElementById('modal');
-        const modalImg = document.getElementById('modalImg');
+    const modal = document.querySelector(".modal");
+    const modalImg = document.querySelector(".modal-content");
+    const closeBtn = document.querySelector(".modal-close");
+    const images = document.querySelectorAll(".img-block img");
 
-        modal.style.display = "block";
-        modalImg.src = img.src;
-    }
-    function closeModal() {
-        document.getElementById('modal').style.display = "none";
-    }
+    images.forEach(img => {
+        img.addEventListener("click", function () {
+            modalImg.src = this.src;
+            modal.style.display = "flex";
+        });
+    });
+
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal || e.target === closeBtn) {
+            modal.style.display = "none";
+        }
+    });
 
     // 🔹 Swiper video
     const swiper = new Swiper('.swiper', {
@@ -114,7 +136,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // 🔹 Form button
+    // 🔹 Form button-file
+    const fileInput = document.getElementById('file');
+    const fileNameDisplay = document.getElementById('file-name');
+
+    fileInput.addEventListener('change', function () {
+        if (this.files.length > 0) {
+            fileNameDisplay.textContent = this.files[0].name;
+        } else {
+            fileNameDisplay.textContent = 'Файл не выбран';
+        }
+    });
+
+    // 🔹 Form button-send
     var counter = 0;
 
     function sendButton(el) {

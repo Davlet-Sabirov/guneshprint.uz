@@ -60,7 +60,7 @@
                 <span class="logo-disc">Типография<br>в Ташкенте</span>
             </div>
 
-            <div class="header-icons">
+            <div class="h-icons">
                 <div class="location">
                     <a href="https://yandex.uz/maps/-/CHaxzT8m">
                         <img src="{% static 'img/map-pin-line.svg' %}" alt="" width="30px">
@@ -88,13 +88,30 @@
                     <a href="https://www.instagram.com/gunesh_print/" class="inst-disc">Instagram</a>
                 </div>
 
-                <a class="btn-header" href="https://t.me/shamsuz1983">Отправить заявку</a>
+                <a class="btn-head" href="https://t.me/shamsuz1983">Отправить заявку</a>
+
+                <input type="checkbox" id="check">
+                <label for="check" class="nav-icons">
+                    <i class="fa-solid fa-bars" id="nav-open"></i>
+                    <i class="fa-solid fa-xmark" id="nav-close"></i>
+                </label>
             </div>
         </header>
 
         <div class="container"><div class="line"></div></div>
 
-        <nav class="container">
+        <nav class="nav-win container">
+            <ul>
+                <li><a href="{% url 'home' %}">Главная</a></li>
+                <li><a href="{% url 'labels' %}">Этикетки</a></li>
+                <li><a href="{% url 'packaging' %}">Упаковки</a></li>
+                <li><a href="{% url 'bags' %}">Пакеты</a></li>
+                <li><a href="{% url 'foils' %}">Платинка</a></li>
+                <li><a href="{% url 'flexoprint' %}">Флексопечать</a></li>
+                <li><a href="{% url 'about' %}">О нас</a></li>
+            </ul>
+        </nav>
+        <nav class="nav-mob container">
             <ul>
                 <li><a href="{% url 'home' %}">Главная</a></li>
                 <li><a href="{% url 'labels' %}">Этикетки</a></li>
@@ -110,52 +127,80 @@
     {% block body %}
     {% endblock %}
 
+    <!-- Form -->
+    <div class="form container">
+        <div class="form-wrapper">
+            <div class="img-form"><img src="{% static 'img/img-form.webp' %}" alt="Печать в Ташкенте"></div>
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <div class="form-items">
+                    <input type="hidden" name="access_key" value="45edcdc5-6f3e-48d6-8d90-9f5115a5ef92">
+                    <div class="form-title">
+                        <h2>Заполните форму и мы рассчитаем Ваш заказ</h2>
+                        <p>Получите скидку на первый заказ!</p>
+                    </div>
+                    <input type="text" class="form-control" id="firstName" name="Имя / Название компании:" placeholder="Имя / Название компании" required>
+                    <input type="text" class="form-control" id="phoneNumber" name="Номер телефона" placeholder="+998(__)___-__-__" required>
+                    <div class="btn-file-wrapper">
+                        <label class="btn-file">Загрузить файл
+                            <input type="file" name="Файлы" id="file" hidden>
+                        </label>
+                        <span id="file-name" class="file-name">Файл не выбран</span>
+                    </div>
+                    <textarea class="form-control" id="comments" rows="2" name="Комментарий" placeholder="Ваш комментарий" required></textarea>
+                    <button class="btn-form" onclick="sendButton(this)">Отправить заявку</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <!-- Footer -->
-    <footer class="footer pt-sm-4">
-        <div class="container pt-5">
-            <div class="row pb-4">
-                <div class="col-6 col-lg-4">
-                    <a href="{% url 'home' %}" class="mb-4"><h4>GUNESH PLUS PRINT LLC</h4></a>
-                    <p>Республика Узбекистан, город Ташкент,<br> Чиланзарский р-н, 20-квартал, дом 11-D</p>
-                    <ul>
-                        <li><a href="tel:+998909795176" class="d-flex">+99890 9795176</a></li>
-                        <li><a href="tel:+998772050400">+99877 2050400</a></li>
-                    </ul>
-                    <div class="icons fs-3">
-                        <a href="https://www.instagram.com/gunesh_print/"><i class="bi bi-instagram me-3"></i></a>
-                        <a href="https://t.me/shamsuz1983"><i class="bi bi-telegram me-3"></i></a>
-                        <a href="https://www.instagram.com/gunesh_print/"><i class="bi bi-facebook me-3"></i></a>
-                        <a href="tel:+998772050400"><i class="bi bi-telephone-fill"></i></a>
+    <footer class="footer">
+        <div class="container">
+            <div class="f-content">
+                <div class="f-block-1">
+                    <div class="f-cont-1">
+                        <a href="{% url 'home' %}"><h3>GUNESH PLUS PRINT LLC</h3></a>
+                        <p>Республика Узбекистан, город Ташкент, Чиланзарский р-н, 20-квартал, дом 11-D</p>
+                        <ul>
+                            <li><a href="tel:+998909795176">+99890 9795176</a></li>
+                            <li><a href="tel:+998772050400">+99877 2050400</a></li>
+                        </ul>
+                        <div class="f-icons">
+                            <a href="https://www.instagram.com/gunesh_print/"><i class="bi bi-instagram me-3"></i></a>
+                            <a href="https://t.me/shamsuz1983"><i class="bi bi-telegram me-3"></i></a>
+                            <a href="https://www.instagram.com/gunesh_print/"><i class="bi bi-facebook me-3"></i></a>
+                            <a href="tel:+998772050400"><i class="bi bi-telephone-fill"></i></a>
+                        </div>
+                    </div>
+                    <div class="f-cont-2">
+                        <h3>Меню</h3>
+                        <ul>
+                            <li><a href="{% url 'home' %}">Главная</a></li>
+                            <li><a href="{% url 'labels' %}">Этикетки</a></li>
+                            <li><a href="{% url 'packaging' %}">Упаковки</a></li>
+                            <li><a href="{% url 'bags' %}">Пакеты</a></li>
+                            <li><a href="{% url 'flexoprint' %}">Флексопечать</a></li>
+                            <li><a href="{% url 'foils' %}">Платинка</a></li>
+                            <li><a href="{% url 'about' %}">О нас</a></li>
+                        </ul>
                     </div>
                 </div>
-
-                <div class="col-6 col-lg-2 ps-4">
-                    <h4>Меню</h4>
-                    <ul>
-                        <li><a href="{% url 'home' %}">Главная</a></li>
-                        <li><a href="{% url 'labels' %}">Этикетки</a></li>
-                        <li><a href="{% url 'packaging' %}">Упаковки</a></li>
-                        <li><a href="{% url 'bags' %}">Пакеты</a></li>
-                        <li><a href="{% url 'flexoprint' %}">Флексопечать</a></li>
-                        <li><a href="{% url 'foils' %}">Платинка</a></li>
-                        <li><a href="{% url 'about' %}">О нас</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-12 col-lg-6 mt-5 mt-lg-0">
+                <div class="f-block-2">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.8437005328224!2d69.17303958947001!3d41.268738938940324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae89520270da9b%3A0x9abc318877fb286e!2sGunesh%20Print!5e0!3m2!1sru!2s!4v1743144734886!5m2!1sru!2s"
                         width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" title="GoogleMap"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
             </div>
-
-            <hr>
-            
-            <div class="d-flex justify-content-between pb-3" style="font-size: 14px;">
-                <p>2025 <a href="https://t.me/Dave_Codess">® Davlet Sabirov.</a> All Rights Reserved.</p>
-                <div class="d-flex">
-                    <a href="{% url 'terms' %}" class="mx-3 me-md-4">Terms of use</a>
+            <div style="margin: 2rem 0;"><hr></div>
+            <div class="f-bottom">
+                <div class="rights-1">
+                    <p>2025 <a href="https://t.me/Dave_Codess">® Davlet Sabirov.</a></p>
+                    <p>All Rights Reserved.</p>
+                </div>
+                <div class="rights-2">
+                    <a href="{% url 'terms' %}">Terms of use</a>
                     <a href="{% url 'politics' %}">Privacy Policy</a>
                 </div>
             </div>
