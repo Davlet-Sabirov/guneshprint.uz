@@ -547,6 +547,9 @@ main .btn-main:hover::after {
     background: none;
     cursor: pointer;
     user-select: none;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
 }
 
 @media (min-width: 768px) {
