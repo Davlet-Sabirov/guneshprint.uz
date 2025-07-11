@@ -59,7 +59,6 @@
                 </a>
                 <span class="logo-disc">Типография<br>в Ташкенте</span>
             </div>
-
             <div class="h-icons">
                 <div class="location">
                     <a href="https://yandex.uz/maps/-/CHaxzT8m">
@@ -72,11 +71,11 @@
                 </div>
 
                 <div class="phone">
-                    <a href="tel:+998909795176">
+                    <a href="tel:+998946012587">
                         <img src="{% static 'img/phone-line.svg' %}" alt="" width="30px">
                     </a>
                     <ul class="phone-disc">
-                        <li><a class="num-1" href="tel:+998909795176">+99890 9795176</a></li>
+                        <li><a class="num-1" href="tel:+998946012587">+99894 6012587</a></li>
                         <li><a class="num-2" href="tel:+998772050400">+99877 2050400</a></li>
                     </ul>
                 </div>
@@ -88,7 +87,7 @@
                     <a href="https://www.instagram.com/gunesh_print/" class="inst-disc">Instagram</a>
                 </div>
 
-                <a class="btn-head" href="https://t.me/shamsuz1983">Отправить заявку</a>
+                <a class="btn-head" href="#form-block">Отправить заявку</a>
 
                 <input type="checkbox" id="check">
                 <label for="check" class="nav-icons">
@@ -127,33 +126,30 @@
     {% block body %}
     {% endblock %}
 
-    <!-- Form -->
-    <div class="form container">
+    <div class="form container" id="form-block">
         <div class="form-wrapper">
             <div class="img-form"><img src="{% static 'img/img-form.webp' %}" alt="Печать в Ташкенте"></div>
-            <form action="https://api.web3forms.com/submit" method="POST">
+            <form id="tg-form">
                 <div class="form-items">
-                    <input type="hidden" name="access_key" value="45edcdc5-6f3e-48d6-8d90-9f5115a5ef92">
                     <div class="form-title">
                         <h2>Заполните форму и мы рассчитаем Ваш заказ</h2>
                         <p>Получите скидку на первый заказ!</p>
                     </div>
-                    <input type="text" class="form-control" id="firstName" name="Имя / Название компании:" placeholder="Имя / Название компании" required>
-                    <input type="text" class="form-control" id="phoneNumber" name="Номер телефона" placeholder="+998(__)___-__-__" required>
+                    <input type="text" class="form-control" id="firstName" name="name" placeholder="Имя / Название компании" required>
+                    <input type="text" class="form-control" id="phoneNumber" name="phone" placeholder="+998(__)___-__-__" required>
                     <div class="btn-file-wrapper">
                         <label class="btn-file">Загрузить файл
-                            <input type="file" name="Файлы" id="file" hidden>
+                            <input type="file" name="file" id="file" hidden>
                         </label>
                         <span id="file-name" class="file-name">Файл не выбран</span>
                     </div>
-                    <textarea class="form-control" id="comments" rows="2" name="Комментарий" placeholder="Ваш комментарий" required></textarea>
+                    <textarea class="form-control" id="message" rows="2" name="message" placeholder="Ваш комментарий" required></textarea>
                     <button class="btn-form" onclick="sendButton(this)">Отправить заявку</button>
                 </div>
             </form>
         </div>
     </div>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="f-content">
@@ -162,7 +158,7 @@
                         <a href="{% url 'home' %}"><h3>GUNESH PLUS PRINT LLC</h3></a>
                         <p>Республика Узбекистан, город Ташкент, Чиланзарский р-н, 20-квартал, дом 11-D</p>
                         <ul>
-                            <li><a href="tel:+998909795176">+99890 9795176</a></li>
+                            <li><a href="tel:+998946012587">+99894 6012587</a></li>
                             <li><a href="tel:+998772050400">+99877 2050400</a></li>
                         </ul>
                         <div class="f-icons">
@@ -207,11 +203,9 @@
         </div>
     </footer>
 
+    <!-- inputmask -->
+    <script src="https://unpkg.com/inputmask@5.0.8/dist/inputmask.min.js"></script>
     <!-- JS -->
     <script src="{% static 'js/script.js' %}"></script>
-    <!-- Swiper -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 </body>
 </html>

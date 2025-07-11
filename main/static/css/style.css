@@ -898,7 +898,6 @@ main .btn-main:hover::after {
     padding: 1rem;
     border: none;
     border-bottom: 1px solid gray;
-    background: none;
 }
 
 .btn-file {
@@ -929,16 +928,22 @@ main .btn-main:hover::after {
     border-bottom: 1px solid black;
 }
 
-.form .btn-form {
+form .btn-form {
     padding: 18px 34px;
     margin-top: 1rem;
     margin-left: auto;
-    background: orange;
-    color: white;
-    border: none;
+    background: none;
+    color: black;
+    border: 1px solid black;
     border-radius: 36px;
     cursor: pointer;
     font-size: 16px;
+}
+
+form .btn-form:hover {
+    color: white;
+    background: orange;
+    border: 1px solid orange;
 }
 
 /*--------------------- Footer ---------------------*/
