@@ -1,14 +1,14 @@
 {% extends 'layout.html' %}
 {% load static %}
 
-{% block title %}Gunesh Print - Типография в Ташкенте{% endblock %}
+{% block title %}{{ title_content.page_title }}{% endblock %}
 
 {% block body %}
 
 <main>
     <div class="container main-items">
         <div class="main-disc">
-            <h1>{{ content.main_heading }}</h1>
+            <h1>{{ h1_content.main_heading }}</h1>
             <p>Рассчитаем точную стоимость за 20 минут со скидкой на первый заказ</p>
             <a class="btn-main" href="https://t.me/shamsuz1983">Узнать стоимость</a>
         </div>
