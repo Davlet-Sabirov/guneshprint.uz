@@ -54,35 +54,37 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // 🔹 Swiper video
-    const swiper = new Swiper('.swiper', {
-        spaceBetween: 10,
-        direction: 'horizontal',
-        loop: true,
+    if (typeof Swiper !== "undefined") {
+        const swiper = new Swiper('.swiper', {
+            spaceBetween: 10,
+            direction: 'horizontal',
+            loop: true,
 
-        navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-        },
-
-        pagination: {
-            el: '.swiper-pagination',
-        },
-
-        breakpoints: {
-            1200: {
-                slidesPerView: 4,
-                spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
             },
-            991: {
-                slidesPerView: 3,
-                spaceBetween: 10,
+
+            pagination: {
+                el: '.swiper-pagination',
             },
-            768: {
-                slidesPerView: 2,
-                spaceBetween: 10,
-            }
-        }
-    });
+
+            breakpoints: {
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 10,
+                },
+                991: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                }
+            },
+        });
+    }
 
     // 🔹 Play button video
     document.querySelectorAll('.video-wrapper').forEach(wrapper => {

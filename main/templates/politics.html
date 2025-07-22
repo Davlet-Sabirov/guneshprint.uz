@@ -1,7 +1,22 @@
 {% extends 'layout.html' %}
 {% load static %}
 
-{% block title %}Gunesh Print - Политика конфиденциальности{% endblock %}
+{% block meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Политика конфиденциальности</title>
+    <link rel="icon" href="{% static 'img/favicon.svg' %}" type="image/svg+xml">
+
+    <meta name="description" content="politics">
+    <meta name="keywords" content="типография Узбекистан, печать упаковки, офсетная печать, флексопечать, печать этикеток, производство коробок, дизайн упаковки, этикетки на заказ, полиграфия Ташкент">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Печать этикеток и упаковок в Ташкенте">
+    <meta property="og:description" content="Наша типография предлагает офсетную и флексо печать упаковок, коробок, этикеток. Разработка дизайна.">
+    <meta property="og:image" content="{% static 'img/og_cover.webp' %}">
+    <meta property="og:url" content="https://guneshprint.uz">
+    <meta property="og:type" content="website">
+{% endblock %}
 
 {% block body%}
 

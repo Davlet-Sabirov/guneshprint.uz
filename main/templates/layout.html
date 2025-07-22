@@ -4,30 +4,14 @@
 <html lang="ru">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
-    <link rel="icon" href="{% static 'img/favicon.svg' %}" type="image/svg+xml">
-
-    <meta name="description" content="Gunesh Print – типография в Узбекистане. Изготовление этикеток, упаковки, коробок офсетной и флексографической печатью. Разработка дизайна под ключ. Качество, скорость, надежность!">
-    <meta name="keywords" content="типография Узбекистан, печать упаковки, офсетная печать, флексопечать, печать этикеток, производство коробок, дизайн упаковки, этикетки на заказ, полиграфия Ташкент">
-
-    <!-- OpenGraph -->
-    <meta property="og:title" content="Печать этикеток и упаковок в Ташкенте">
-    <meta property="og:description" content="Наша типография предлагает офсетную и флексо печать упаковок, коробок, этикеток. Разработка дизайна.">
-    <meta property="og:image" content="{% static 'img/og_cover.webp' %}">
-    <meta property="og:url" content="https://guneshprint.uz">
-    <meta property="og:type" content="website">
+    {% block meta %}{% endblock %}
 
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
-
-    <!-- Swiper CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" onload="this.media='all'" media="print">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" onload="this.media='all'" media="print">
 
     <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
+    <script async type="text/javascript">
         (function(m,e,t,r,i,k,a){
             m[i]=m[i]||function(){
                 (m[i].a=m[i].a||[]).push(arguments)};

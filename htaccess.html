@@ -4,3 +4,25 @@ PassengerBaseURI "/"
 PassengerPython "/home/guneshpr/virtualenv/domains/guneshprint.uz/public_html/3.12/bin/python"
 PassengerAppLogFile "/home/guneshpr/logs/passenger.logs"
 # DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/guneshpr/domains/guneshprint.uz/public_html"
+PassengerBaseURI "/"
+PassengerPython "/home/guneshpr/virtualenv/domains/guneshprint.uz/public_html/3.12/bin/python"
+PassengerAppLogFile "/home/guneshpr/logs/passenger.logs"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(js|css|webp|mp4|svg)$">
+    Header set Cache-Control "public, max-age=31536000"
+  </FilesMatch>
+</IfModule>

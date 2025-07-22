@@ -1,7 +1,25 @@
 {% extends 'layout.html' %}
 {% load static %}
 
-{% block title %}{{ title_content.page_title }}{% endblock %}
+{% block meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная страница</title>
+    <link rel="icon" href="{% static 'img/favicon.svg' %}" type="image/svg+xml">
+
+    <meta name="description" content="index">
+    <meta name="keywords" content="типография Узбекистан, печать упаковки, офсетная печать, флексопечать, печать этикеток, производство коробок, дизайн упаковки, этикетки на заказ, полиграфия Ташкент">
+
+    <!-- OpenGraph -->
+    <meta property="og:title" content="Печать этикеток и упаковок в Ташкенте">
+    <meta property="og:description" content="Наша типография предлагает офсетную и флексо печать упаковок, коробок, этикеток. Разработка дизайна.">
+    <meta property="og:image" content="{% static 'img/og_cover.webp' %}">
+    <meta property="og:url" content="https://guneshprint.uz">
+    <meta property="og:type" content="website">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" onload="this.media='all'" media="print">
+{% endblock %}
 
 {% block body %}
 
@@ -13,7 +31,7 @@
             <a class="btn-main" href="https://t.me/shamsuz1983">Узнать стоимость</a>
         </div>
         <div class="main-img">
-            <img src="{% static 'img/hero.webp' %}" alt="etiketki upakovki" width="100%" height="100%">
+            <img src="{% static 'img/hero.webp' %}" alt="etiketki upakovki" width="100%" height="100%" fetchpriority="high">
         </div>
     </div>
 </main>
